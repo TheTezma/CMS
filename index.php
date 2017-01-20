@@ -11,9 +11,8 @@ $Config = new Config();
 if($login->is_loggedin()!="") {
     $login->checkPermission($_SESSION['user_session']);
 }
+$Render->Head("");
 
 $Render->AdminBar("goto-admin");
-
-$Render->Head("");
 
 ?>
