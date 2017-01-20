@@ -75,8 +75,7 @@ class USER
     	if($permRow['user_permission'] == 0) {
 
     	} elseif($permRow['user_permission'] == 1) {
-    		$Render = new Render();
-    		$Render->AdminBar();
+    		
     	}	
     }
     

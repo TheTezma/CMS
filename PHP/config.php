@@ -3,19 +3,20 @@
 # chrisrichardsdev@gmail.com
 
 include_once 'user.php';
+include_once 'database.php';
 
-# SITE DETAILS
-$Title = "";
+# Site Details #
+$Title = "Personalised Party Treats";
 $Tagline = "";
-
-# Config Settings
-$Setup = false;
 
 class Config {
 
-	public function run_setup() {
-		$User = new USER();
-		$User->redirect("");
+	public $Title = "Personalised Party Treats";
+
+	public function ChangeTitle($TitleInput) {
+
+		$this->$Title = strip_tags($TitleInput);
+		header("Location: ../");
 	}
 
 }

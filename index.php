@@ -8,16 +8,12 @@ $login = new USER();
 $Render = new Render();
 $Config = new Config();
 
-if($Setup == false) {
-    $Config->run_setup();
-} elseif($Setup == true) {
-
-}
-
 if($login->is_loggedin()!="") {
     $login->checkPermission($_SESSION['user_session']);
 }
 
-$Render->Head();
+$Render->AdminBar("goto-admin");
+
+$Render->Head("");
 
 ?>

@@ -1,0 +1,78 @@
+.admin-bar {
+	list-style-type: none;
+	display: inline-block;
+	background-color: #333;
+	margin:0;
+	width: calc(100vw - 0px);
+	padding:5px 0;
+	line-height: 3vh;
+	height: 3vh;
+}
+
+.admin-bar li {
+	padding:0 5px;
+}
+
+.admin-bar li a {
+	text-decoration: none;
+	color:white;
+	font-family: "Roboto", sans-serif;
+}
+
+.admin-bar li a:hover {
+	cursor: pointer;
+}
+
+.page {
+
+}
+
+.side-menu {
+	background-color: #333;
+	width: 175px;
+	border-top: 1px solid #f0f0f0;
+	height: calc(97vh - 16px);
+	display: inline-block;
+	padding-top: -15px;
+}
+
+.side-menu ul {
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+}
+
+.side-menu ul li {
+	padding: 5px 5px;
+	text-align: center;
+}
+
+.side-menu ul li:hover {
+	background-color:#444;
+}
+
+.side-menu ul li a {
+	text-decoration: none;
+	color: #f0f0f0;
+	font-family: "Roboto", sans-serif;
+	display: block;
+	font-size: 18px;
+}
+
+.content {
+	display: inline-block;
+	padding: 0px;
+}
+
+.input-label {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+}
+
+.input {
+	width: 250px;
+	border:1px solid #e0e0e0;
+	border-radius: 3px;
+	font-size: 16px;
+	padding: 4px;
+}
