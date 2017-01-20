@@ -1,0 +1,7 @@
+RewriteEngine ON
+
+RewriteRule ^register$ register.php [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^admin-setup$ PHP/admin-setup.php [L]
+
+RewriteRule ^user/([A-Za-z0-9_]+)$ pages/profile.php?u=$1
