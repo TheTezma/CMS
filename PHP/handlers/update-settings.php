@@ -10,7 +10,6 @@ $User = new User;
 
 if(isset($_POST['site-title'])) {
 	$NewTitle = strip_tags($_POST['site-title']);
-
 	$Config->ChangeTitle($NewTitle);
 } else {
 	$User->redirect("../../");

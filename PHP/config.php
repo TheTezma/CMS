@@ -5,17 +5,23 @@
 include_once 'user.php';
 include_once 'database.php';
 
-# Site Details #
-$Title = "Personalised Party Treats";
-$Tagline = "";
-
 class Config {
 
-	public $Title = "Personalised Party Treats";
+	public function GetSiteConfig() {
+		$User = new User;
+
+		$stmt = $User->runQuery("SELECT * FROM site WHERE id=1");
+		$stmt->execute();
+
+		$siteRow = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$Title = $siteRow['title'];
+	}
 
 	public function ChangeTitle($TitleInput) {
-
-		$this->$Title = strip_tags($TitleInput);
+		$SanitizedTitleInput = strip_tags($TitleInput);
+		$stmt = $User->runQuery("UPDATE site SET title=:title WHERE id=1");
+		$stmt->execute(array(":title"=>$SanitizedTitleInput));
 		header("Location: ../");
 	}
 
