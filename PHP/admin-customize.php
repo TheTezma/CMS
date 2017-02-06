@@ -27,7 +27,7 @@ $Render->AdminBar("goto-home");
 		<div class="content">
 			<form action="../PHP/handlers/update-settings.php" method="POST">
 				<span class="input-label">Site Title:</span>
-				<input class="input" type="text" name="site-title" value="<?= $Title ?>">
+				<input class="input" type="text" name="site-title" value="<?= $Config->Title ?>">
 				<input type="submit" name="update-title" value="Update">
 			</form>
 		</div>
